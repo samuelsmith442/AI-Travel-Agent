@@ -9,5 +9,16 @@ export default defineConfig({
     host: true,
     open: true
   },
-  base: './'
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+        }
+      }
+    }
+  }
 })
