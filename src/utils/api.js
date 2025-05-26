@@ -10,7 +10,7 @@ export async function getCurrentWeather({ location }) {
     try {
         const weatherUrl = new URL("https://api.openweathermap.org/data/2.5/weather");
         weatherUrl.searchParams.append("q", location);
-        weatherUrl.searchParams.append("units", "metric");
+        weatherUrl.searchParams.append("units", "imperial");
         weatherUrl.searchParams.append("appid", import.meta.env.VITE_WEATHER_API_KEY);
         const res = await fetch(weatherUrl);
         if (!res.ok) {
