@@ -33,7 +33,7 @@ export default function TripPlanner() {
         state: {
           tripData: formData,
           weatherData: {
-            description: `Current temperature is ${weatherResponse.main.temp}°C with ${weatherResponse.weather[0].description}`
+            description: `Current temperature is ${weatherResponse.main.temp}°F with ${weatherResponse.weather[0].description}`
           },
           flightData: {
             description: suggestions.flight
